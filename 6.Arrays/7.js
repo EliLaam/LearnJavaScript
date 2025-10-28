@@ -62,8 +62,9 @@ let sum2 = M1.reduce(
 	// Tham số thứ 1: function
 	(accumulator, currentValue, currentIndex, array) => {
 		return accumulator + currentValue;
-	}
-	// Tham số thứ 2: initialValue
+	} //,
+	// Tham số thứ 2: initialValue (giá trị khởi tạo của accumulator)
+	// 0
 );
 console.log(sum2);
 
