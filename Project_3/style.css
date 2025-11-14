@@ -4,16 +4,39 @@
 	box-sizing: border-box;
 	font-family: "Outfit", sans-serif;
 }
+
 body {
-	height: 100vh;
+	transition: 1s;
 	display: flex;
-	align-items: center;
+	height: 100vh;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 	background-color: rgba(165, 169, 255, 0.614);
 }
 
+button {
+	transition: 1s;
+	font-size: 40px;
+	color: #fff;
+	background-color: rgb(62, 62, 62);
+	border: 2px solid rgba(43, 43, 43, 0.884);
+	border-radius: 50px;
+	height: 100px;
+	width: 300px;
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.dark-button {
+	transition: 1s;
+	color: #1b1b1b;
+	background-color: #d4d4d4;
+	border: 2px solid rgba(142, 142, 142, 0.884);
+}
+
 .dark-mode {
+	transition: 1s;
 	background-color: #303030;
 	color: aliceblue;
 }
