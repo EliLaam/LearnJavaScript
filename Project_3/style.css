@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Outfit", sans-serif;
+}
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgba(165, 169, 255, 0.614);
+}
+
+.dark-mode {
+	background-color: #303030;
+	color: aliceblue;
+}
