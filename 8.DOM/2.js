@@ -16,6 +16,9 @@ if (firstLink) {
 // 2. element.setAttribute("att","value") : Trả về pt có thuộc tính đó và có thể thêm thuộc tính
 firstLink.setAttribute("target", "_blank"); // thêm thuộc tính target=_blank cho thẻ a
 
+// Dùng cho thuộc tính có sẵn nhanh gọn
+// firstLink.target = "_blank"
+
 // Vì firstLink chỉ chọn thẻ a đầu tiên nên ta dùng All để chọn tất cả
 // Sử dụng querySelectorAll để chọn tất cả các thẻ a trong ul
 const links = document.querySelectorAll("ul a");
