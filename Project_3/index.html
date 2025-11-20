@@ -3,23 +3,35 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dark Mode Toggle Basic</title>
-		<link rel="stylesheet" href="style.css" />
+		<title>Gallery Basic</title>
+		<style>
+			h2 {
+				text-align: center;
+			}
+			#container {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+			}
+			div {
+				height: 100px;
+				width: 100px;
+				margin: 2px;
+				border-radius: 12px;
+				background-color: blueviolet;
+				/* sử dụng flexbox để căn ảnh */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				/* căn stt bên dưới ảnh */
+				flex-flow: column;
+			}
+		</style>
 	</head>
-	<body id="theme">
-		<h1>Dark Mode Toggle Basic</h1>
-		<button id="button-action">Switch theme</button>
-		<script>
-			// lấy button làm điều kiện thay đổi
-			const darkMode = document.getElementById("button-action");
-
-			// element.addEvent("type", arrow function)
-			darkMode.addEventListener("click", () => {
-				// thay đổi theme body
-				document.body.classList.toggle("dark-mode");
-				// thay đổi button
-				darkMode.classList.toggle("dark-button");
-			});
-		</script>
+	<body>
+		<h2>Danh sách ảnh</h2>
+		<section id="container"></section>
+		<script src="main.js"></script>
 	</body>
 </html>
