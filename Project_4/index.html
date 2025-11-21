@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dark Mode Toggle Basic</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body id="theme">
+		<h1>Dark Mode Toggle Basic</h1>
+		<button id="button-action">Switch theme</button>
+		<script>
+			// lấy button làm điều kiện thay đổi
+			const darkMode = document.getElementById("button-action");
+
+			// element.addEventListener("type", arrow function)
+			darkMode.addEventListener("click", () => {
+				// thay đổi theme body
+				document.body.classList.toggle("dark-mode");
+				// thay đổi button
+				darkMode.classList.toggle("dark-button");
+			});
+		</script>
+	</body>
+</html>
