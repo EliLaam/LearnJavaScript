@@ -1,15 +1,6 @@
 // Các phương thức làm việc với mảng phần 2
 /*
-A. Các phương thức phần 1 
 STT	phương thức
-1	concat ()
-2	push ()
-3	unshift ()
-4	pop ()
-5	shift ()
-6	slice ()
-7	includes ()
-B. Các phương thức phần 2
 8   indexOf()
 9   lastIndexOf()
 10  reverse()

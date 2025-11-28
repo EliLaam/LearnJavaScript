@@ -1,45 +1,18 @@
-// 8. Phương thức filter()
-/*
-A. Các phương thức phần 1 (bài 2)
-STT	phương thức
-1	concat ()
-2	push ()
-3	unshift ()
-4	pop ()
-5	shift ()
-6	slice ()
-7	includes ()
-B. Các phương thức phần 2 (Bài 3)
-8   indexOf()
-9   lastIndexOf()
-10  reverse()
-11  join(separator)
-C. Các phương thức phần 3 (Bài 4)
-12 splice()
-=-=-=-=-=-= Bài 5 =-=-=-=-=-= 
-13 Toán tử Spread (...) - ES6
-=-=-=-=-=-= Bài 6 =-=-=-=-=-= 
-14 sort()
-=-=-=-=-=-= Bài 7 =-=-=-=-=-= 
-15 reduce()
-=-=-=-=-=-= Bài 8 =-=-=-=-=-= 
-16 filter()
-*/
-
-// 16. Phương thức filter()
-/*
-Cú pháp:    array.filter( function)
-
-function(currentValue, [currentIndex] , [array])
+// Phương thức filter(): Trích lọc các phần tử thỏa mãn điều kiện của hàm
+/* Dựa trên 1 hàm xử lí -> để tạo ra một mảng mới từ mảng đã cho, chỉ chứa các phần tử 
+thỏa mãn một điều kiện nhất định được xác định bởi hàm */
+/*  Syntax: array.filter(function)
+-function(currentValue, [currentIndex] , [array])
 Hàm được gọi với những đối số sau: 
 currentValue: Giá trị hiện tại đang xử lý trong mảng. 
 currentIndex: (Tùy chọn) Chỉ số của phần tử đang xử lý. 
 array: (Tùy chọn) Mảng đang được duyệt.
 */
+
 let numbers = [1, 2, 3, 4, 5];
 // Tìm những số chẵn trong mảng
 let evenNumbers = numbers.filter(
 	// Function
 	(value, index, array) => value % 2 === 0
 );
-console.log(evenNumbers); // Output: [2, 4]
+console.log(evenNumbers); // Output: [2,4]

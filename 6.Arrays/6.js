@@ -1,29 +1,16 @@
-// 6. Phương thức sort()
+// Phương thức sort()
+// Syntax: array.sort([compareFunction])
 /*
-A. Các phương thức phần 1 (bài 2)
-STT	phương thức
-1	concat ()
-2	push ()
-3	unshift ()
-4	pop ()
-5	shift ()
-6	slice ()
-7	includes ()
-B. Các phương thức phần 2 (Bài 3)
-8   indexOf()
-9   lastIndexOf()
-10  reverse()
-11  join(separator)
-C. Các phương thức phần 3 (Bài 4)
-12 splice()
-=-=-=-=-=-=-= Bài 5 =-=-=-=-=-=-=
-13 Toán tử Spread (...) - ES6
-=-=-=-=-=-=-= Bài 6 =-=-=-=-=-=-=
-14 sort()
+array: mảng cần được sắp xếp
+compareFunction(Tùy chọn): Hàm so sánh dùng để xác định thứ tự sắp xếp
+Nếu KHÔNG được cung cấp compareFunction, sort() sẽ sắp xếp các phần tử dưới dạng chuỗi UNICODE
 */
 
-// 14. Phương thức sort()
-//14.1 Khi không truyền compareFunction
+// 1. Khi không truyền compareFunction
+/*  So sánh lần lượt các kí tự đầu đến các kí tự sau (Nếu các kí tự khác nhau -> dừng ss)
+	Sắp xếp theo thứ tự tăng dần dựa theo thứ tự trong bảng mã UNICODE */
+
+// Trường hợp 1: ít kí tự
 let M1 = ["b", "a", "c"];
 // Để xem giá trị unicode dùng charCodeAt()
 console.log("b".charCodeAt());
@@ -35,8 +22,9 @@ for (let element of M1) {
 
 let sortedM1 = M1.sort();
 console.log(sortedM1);
+
 /*
-Trường hợp 2: phần tử có nhiều ký tự: So sánh các ký tự đầu để xếp
+Trường hợp 2: phần tử có nhiều ký tự: So sánh lần lượt các ký tự đầu để xếp
 Nếu ký tự giống nhau, so tiếp đến ký tự phía sau, 
 mã unicode thấp hơn xếp trước
 */
@@ -52,7 +40,7 @@ console.log("1".charCodeAt()); // 49
 console.log("9".charCodeAt()); // 57
 console.log("0".charCodeAt()); // 48
 
-// 14.2 so sánh với hàm so sánh Compare Function
+// 2. So sánh với hàm so sánh Compare Function
 /*
 Hàm So sánh (Compare Function):
 Nếu compareFunction(a, b) trả về một giá trị < 0, a sẽ được đặt trước b.
