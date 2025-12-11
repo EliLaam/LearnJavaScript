@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+		</style>
+		<title>Asynchronous</title>
+	</head>
+	<body>
+		<!-- KHÁI NIỆM -->
+		<h1>Khái niệm không đồng bộ (Asynchronous)</h1>
+		<p>
+			Luồng không đồng bộ JavaScript đề cập đến cách JavaScript xử lý các tác vụ
+			cần thời gian để hoàn tất, giống như đọc tệp hoặc chờ người dùng nhập, mà
+			không chặn việc thực thi mã khác.
+		</p>
+		<p>
+			Việc "đi ra ngoài Internet" để lấy dữ liệu là một việc RẤT TỐN THỜI GIAN
+			(có thể mất vài mili giây đến vài giây). Nếu JavaScript phải "đứng im chờ
+			đợi" cho đến khi có dữ liệu trả về, toàn bộ trang web của bạn sẽ bị "đóng
+			băng", người dùng không thể làm gì được.
+		</p>
+		<p>
+			Giải pháp: JavaScript thực hiện các tác vụ này một cách bất đồng bộ
+			(asynchronously).
+		</p>
+		<ol>
+			Nó sẽ:
+			<li>Gửi yêu cầu đi.</li>
+			<li>
+				KHÔNG CHỜ ĐỢI. Nó tiếp tục chạy các dòng code tiếp theo ngay lập tức.
+			</li>
+			<li>
+				Khi nào yêu cầu hoàn thành (thành công hoặc thất bại), nó sẽ thực thi
+				một "hàm đợi sẵn" để xử lý kết quả.
+			</li>
+		</ol>
+
+		<!-- CƠ CHẾ -->
+		<h3>Có 3 cơ chế chính</h3>
+		<ul>
+			<li>CallBack</li>
+			<li>Promise</li>
+			<li>async/await</li>
+		</ul>
+
+		<h1>Các Khái Niệm Quan Trọng Khác</h1>
+		<!-- CALLSTACK -->
+		<h2>CallStack</h2>
+		<p>
+			Call Stack: Cấu trúc dữ liệu đơn giản được cung cấp bởi V8 Engine
+			JavaScript thực thi mã bằng cách sử dụng Call Stack, theo dõi hàm hiện
+			đang thực thi.
+		</p>
+		<ul>
+			<li>
+				Hàm chính (toàn bộ tập lệnh) được tự động thêm vào ngăn xếp cuộc gọi.
+			</li>
+			<li>
+				Các hàm được thêm vào ngăn xếp lệnh gọi khi được gọi và xóa sau khi thực
+				thi.
+			</li>
+			<li>
+				JavaScript là một luồng, có nghĩa là chỉ một tác vụ được xử lý trong
+				ngăn xếp lệnh gọi tại một thời điểm.
+			</li>
+		</ul>
+
+		<!-- CALLBACK -->
+		<h2>CallBack Queue</h2>
+		<p>
+			Công việc của nó là duy trì một danh sách tất cả các hàm gọi lại cần được
+			thực thi.
+		</p>
+
+		<!-- EVENT LOOP -->
+		<h2>Event Loop</h2>
+		<p>
+			Vòng lặp sự kiện liên tục kiểm tra xem ngăn xếp cuộc gọi có trống hay
+			không.
+		</p>
+		<p>
+			Sau đó, nó xử lý các tác vụ từ Callback Queue hoặc Microtask Queue (như
+			gọi lại Promise).
+		</p>
+
+		<!-- API -->
+		<h2>Web API</h2>
+		<p>What is Web API? API stands for Application Programming Interface.</p>
+		<p>A Web API is an application programming interface for the Web.</p>
+		<p>A Browser API can extend the functionality of a web browser.</p>
+		<p>A Server API can extend the functionality of a web server.</p>
+
+		<h3>Example</h3>
+		<h3>JavaScript Geolocation</h3>
+		<p>Click the button to get your coordinates.</p>
+		<button onclick="getLocation()">Try It</button>
+		<p id="demo"></p>
+
+		<script src="1.js"></script>
+	</body>
+</html>
